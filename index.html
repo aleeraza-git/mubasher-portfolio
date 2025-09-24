@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mubasher Hasanat - Nutritionist / Dietitian</title>
+    <meta name="description" content="Professional nutritionist and dietitian offering evidence-based dietary interventions for improved health and wellbeing.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(230, 245, 235, 0.9) 0%, rgba(210, 235, 240, 0.9) 100%);
+        }
+        .section-divider {
+            position: relative;
+            height: 80px;
+            overflow: hidden;
+        }
+        .section-divider svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .form-input {
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.2);
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .modal {
+            transition: all 0.3s ease;
+        }
+        .modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-semibold text-green-600">Mubasher Hasanat</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-green-600 transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-green-600 transition">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-green-600 transition">Services</a>
+                    <a href="#certificates" class="text-gray-700 hover:text-green-600 transition">Certificates</a>
+                    <a href="#contact" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">Book Consultation</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4 shadow-lg">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-green-600 transition">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-green-600 transition">About</a>
+            <a href="#services" class="block py-2 text-gray-700 hover:text-green-600 transition">Services</a>
+            <a href="#certificates" class="block py-2 text-gray-700 hover:text-green-600 transition">Certificates</a>
+            <a href="#contact" class="block mt-2 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition text-center">Book Consultation</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 hero-gradient">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Mubasher Hasanat</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-green-600 mb-6">Nutritionist / Dietitian</h2>
+                    <p class="text-lg text-gray-700 mb-8">A passionate nutritionist committed to improving health and wellbeing through evidence-based dietary interventions.</p>
+                    <a href="#contact" class="bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition inline-block">Book a Consultation</a>
+                </div>
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                    <div class="relative">
+                        <img src="https://placehold.co/640x360/E6F5EB/000000?text=Mubasher+Hasanat" alt="Mubasher Hasanat" class="rounded-lg shadow-xl w-full max-w-md">
+                        <div class="absolute -bottom-4 -right-4 bg-white p-2 rounded-lg shadow-md">
+                            <div class="bg-green-100 p-3 rounded-md flex items-center">
+                                <i data-feather="award" class="text-green-600 mr-2"></i>
+                                <span class="text-sm font-medium text-green-800">Certified Nutritionist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="section-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="fill-current text-green-50"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="fill-current text-green-50"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="fill-current text-green-100"></path>
+            </svg>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up">About Me</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto" data-aos="fade-up" data-aos-delay="100"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Professional Summary</h3>
+                    <p class="text-gray-700 mb-6">As a dedicated nutritionist with a strong academic background and practical experience, I specialize in creating personalized dietary plans that promote optimal health and address specific medical conditions. My approach combines scientific research with practical lifestyle adjustments.</p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 mt-8">Education</h3>
+                    <div class="bg-green-50 p-6 rounded-lg mb-4">
+                        <h4 class="text-lg font-semibold text-gray-800">BS Human Nutrition and Dietetics</h4>
+                        <p class="text-green-600 mb-2">University of Agriculture Peshawar</p>
+                        <p class="text-gray-600">2018 - 2022</p>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Professional Experience</h3>
+                    
+                    <div class="bg-white border border-gray-200 rounded-lg p-6 mb-4 shadow-sm hover:shadow-md transition">
+                        <h4 class="text-lg font-semibold text-gray-800">Research Officer</h4>
+                        <p class="text-green-600 mb-2">Pakistan Council of Scientific & Industrial Research</p>
+                        <p class="text-gray-600 mb-3">2022 - Present</p>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                            <li>Contributed to development of cannabinoid-enriched nutritional products</li>
+                            <li>Conducted nutritional analysis and product development research</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition">
+                        <h4 class="text-lg font-semibold text-gray-800">Field Officer</h4>
+                        <p class="text-green-600 mb-2">Pakistan Development Foundation</p>
+                        <p class="text-600 mb-3">2021 - 2022</p>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                            <li>Conducted nutrition and sanitation awareness sessions</li>
+                            <li>Organized community health initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12" data-aos="fade-up">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Internship Experience</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-semibold text-gray-800">Hayatabad Medical Complex</h4>
+                        <p class="text-gray-600 mb-3">2021</p>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                            <li>Managed cases of Diabetes and Obesity</li>
+                            <li>Developed personalized meal plans for patients</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-semibold text-gray-800">Lady Reading Hospital</h4>
+                        <p class="text-gray-600 mb-3">2020</p>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                            <li>Worked with cases of Severe Malnutrition</li>
+                            <li>Assisted in therapeutic feeding programs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Services Section -->
+    <section id="services" class="py-16 bg-green-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up">Services & Skills</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto" data-aos="fade-up" data-aos-delay="100"></div>
+                <p class="text-gray-700 max-w-2xl mx-auto mt-4" data-aos="fade-up" data-aos-delay="200">Comprehensive nutrition services tailored to your individual needs and health goals.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md skill-card transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="clipboard" class="text-green-600 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Nutrition Assessment</h3>
+                    <p class="text-gray-700">Comprehensive evaluation of dietary habits, lifestyle factors, and health status to identify nutritional needs and areas for improvement.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md skill-card transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="calendar" class="text-green-600 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Personalized Meal Planning</h3>
+                    <p class="text-gray-700">Customized meal plans designed to meet your specific nutritional requirements, preferences, and health goals.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md skill-card transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="heart" class="text-green-600 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Patient Education</h3>
+                    <p class="text-gray-700">Evidence-based counseling to help you understand the relationship between nutrition and your health condition.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md skill-card transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="users" class="text-green-600 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Community Outreach</h3>
+                    <p class="text-gray-700">Nutrition education programs for communities, schools, and organizations to promote healthy eating habits.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md skill-card transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="activity" class="text-green-600 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Fitness Training</h3>
+                    <p class="text-gray-700">NASM-certified fitness guidance to complement your nutritional plan for optimal health outcomes.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md skill-card transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="bar-chart-2" class="text-green-600 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Nutrition Analysis</h3>
+                    <p class="text-gray-700">Advanced software analysis of dietary intake to provide precise nutritional recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-16 bg-white">
+        <div class="section-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="fill-current text-green-50"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="fill-current text-green-50"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="fill-current text-green-100"></path>
+            </svg>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up">Certificates & Training</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto" data-aos="fade-up" data-aos-delay="100"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Certificate 1 -->
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-600" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-green-600 w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Certified Fitness Trainer</h3>
+                            <p class="text-green-600 mb-2">NASM (National Academy of Sports Medicine)</p>
+                            <p class="text-gray-600">2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 2 -->
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-600" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-green-600 w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Nutrition Training</h3>
+                            <p class="text-green-600 mb-2">Pak-Korea Nutrition Center</p>
+                            <p class="text-gray-600">2021</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 3 -->
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-600" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-start">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-green-600 w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Nutrition in Emergencies</h3>
+                            <p class="text-green-600 mb-2">UNICEF</p>
+                            <p class="text-gray-600">2021</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 4 -->
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-600" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-green-600 w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Nutrition Assessment</h3>
+                            <p class="text-green-600 mb-2">Action Against Hunger</p>
+                            <p class="text-gray-600">2020</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 5 -->
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-600" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-green-600 w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Food Safety & Hygiene</h3>
+                            <p class="text-green-600 mb-2">Pakistan Standards & Quality Control Authority</p>
+                            <p class="text-gray-600">2019</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 6 -->
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-600" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-start">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-green-600 w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Public Health Nutrition</h3>
+                            <p class="text-green-600 mb-2">Ministry of National Health Services</p>
+                            <p class="text-gray-600">2018</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Form Section -->
+    <section id="contact" class="py-16 bg-green-600 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Book a Consultation</h2>
+                <div class="w-20 h-1 bg-white mx-auto" data-aos="fade-up" data-aos-delay="100"></div>
+                <p class="max-w-2xl mx-auto mt-4 opacity-90" data-aos="fade-up" data-aos-delay="200">Ready to take the first step toward better health? Fill out the form below and I'll get back to you within 24 hours.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden" data-aos="fade-up">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-green-700 p-8 flex items-center">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                            <div class="flex items-center mb-4">
+                                <i data-feather="mail" class="mr-3"></i>
+                                <span>mubashirhasanat45@gmail.com</span>
+                            </div>
+                            <div class="flex items-center mb-6">
+                                <i data-feather="phone" class="mr-3"></i>
+                                <span>+92 310 9677097</span>
+                            </div>
+                            <p class="text-green-100">Consultations available in-person or via video call.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8 text-gray-800">
+                        <form id="consultation-form" action="https://formspree.io/f/myznyqdd" method="POST" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md form-input focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" name="_replyto" required class="w-full px-4 py-2 border border-gray-300 rounded-md form-input focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md form-input focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            
+                            <div>
+                                <label for="topic" class="block text-sm font-medium text-gray-700 mb-1">Consultation Topic</label>
+                                <select id="topic" name="topic" required class="w-full px-4 py-2 border border-gray-300 rounded-md form-input focus:outline-none focus:ring-2 focus:ring-green-500">
+                                    <option value="">Select a topic</option>
+                                    <option value="Weight Management">Weight Management</option>
+                                    <option value="Meal Planning">Personalized Meal Planning</option>
+                                    <option value="Diabetes">Diabetes Management</option>
+                                    <option value="Sports Nutrition">Sports Nutrition</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label for="height" class="block text-sm font-medium text-gray-700 mb-1">Height (cm)</label>
+                                    <input type="number" id="height" name="height" class="w-full px-4 py-2 border border-gray-300 rounded-md form-input focus:outline-none focus:ring-2 focus:ring-green-500">
+                                </div>
+                                <div>
+                                    <label for="weight" class="block text-sm font-medium text-gray-700 mb-1">Weight (kg)</label>
+                                    <input type="number" id="weight" name="weight" class="w-full px-4 py-2 border border-gray-300 rounded-md form-input focus:outline-none focus:ring-2 focus:ring-green-500">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="details" class="block text-sm font-medium text-gray-700 mb-1">Additional Details</label>
+                                <textarea id="details" name="details" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md form-input focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition flex items-center justify-center">
+                                <span>Submit Request</span>
+                                <i data-feather="send" class="ml-2 w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 opacity-0 pointer-events-none modal">
+        <div class="bg-white p-8 rounded-lg max-w-md mx-4" data-aos="zoom-in">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-feather="check" class="text-green-600 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Request Submitted!</h3>
+                <p class="text-gray-600 mb-6">Thank you for your consultation request. I'll get back to you within 24 hours.</p>
+                <button id="close-modal" class="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 transition">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Mubasher Hasanat</h3>
+                    <p class="text-gray-400">Nutritionist / Dietitian</p>
+                    <p class="text-gray-400 mt-2">Helping you achieve optimal health through personalized nutrition.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#certificates" class="text-gray-400 hover:text-white transition">Certificates</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact</h3>
+                    <div class="flex items-center mb-3">
+                        <i data-feather="mail" class="text-gray-400 mr-3 w-5 h-5"></i>
+                        <span class="text-gray-400">mubashirhasanat45@gmail.com</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i data-feather="phone" class="text-gray-400 mr-3 w-5 h-5"></i>
+                        <span class="text-gray-400">+92 310 9677097</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">&copy; 2025 Mubasher Hasanat. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="facebook" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="instagram" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script>
+        // Feather Icons initialization
+        feather.replace();
+
+        // AOS (Animate On Scroll) initialization
+        AOS.init({
+            duration: 800,
+            once: true,
+            disable: 'mobile'
+        });
+
+        // Mobile menu functionality
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const form = document.getElementById('consultation-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        
+        form.addEventListener('submit', async (event) => {
+            // Prevent the default form submission to handle it manually
+            event.preventDefault();
+            
+            // Get a reference to the form and the submit button
+            const form = event.target;
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            // Show loading state
+            submitButton.innerHTML = '<span>Sending...</span><i data-feather="loader" class="ml-2 w-4 h-4 animate-spin"></i>';
+            submitButton.disabled = true;
+            
+            // Re-initialize feather icons to render the loader
+            feather.replace();
+
+            // Send the form data to Formspree
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            // Handle the response
+            if (response.ok) {
+                // On success, show the modal and reset the form
+                successModal.classList.add('active');
+                form.reset();
+            } else {
+                console.error('Form submission failed:', response);
+                // In a real app, you would show an error message here
+            }
+
+            // Reset the button state
+            submitButton.innerHTML = '<span>Submit Request</span><i data-feather="send" class="ml-2 w-4 h-4"></i>';
+            submitButton.disabled = false;
+            feather.replace();
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.remove('active');
+        });
+        
+        // Hide modal when clicking outside
+        successModal.addEventListener('click', (event) => {
+            if (event.target === successModal) {
+                successModal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
